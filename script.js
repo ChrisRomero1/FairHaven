@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initCounterAnimation();
   initCalendly();
   initGetInTouchModal();
+  initHeroCycler();
 });
 
 /**
@@ -358,6 +359,31 @@ function initGetInTouchModal() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
   });
+}
+
+/**
+ * Hero Cycling Headline
+ */
+function initHeroCycler() {
+  const el = document.getElementById('heroCycler');
+  if (!el) return;
+
+  const words = ['Performance.', 'Management.', 'Expertise.', 'Elevated Results.'];
+  let index = 0;
+
+  function cycle() {
+    // Fade out
+    el.classList.add('fade-out');
+
+    setTimeout(() => {
+      index = (index + 1) % words.length;
+      el.textContent = words[index];
+      el.classList.remove('fade-out');
+    }, 400);
+  }
+
+  // Start cycling after initial load animation settles
+  setInterval(cycle, 2200);
 }
 
 // Console branding
