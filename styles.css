@@ -61,6 +61,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -72,6 +74,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Typography */
@@ -1550,11 +1553,12 @@ a {
   content: '+';
   font-size: 1.5rem;
   color: var(--accent-gold);
-  transition: transform var(--transition-fast);
+  transition: content var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .faq-item.active .faq-question::after {
-  transform: rotate(45deg);
+  content: '−';
 }
 
 .faq-answer {
@@ -1856,6 +1860,11 @@ a {
   
   .hero {
     padding-top: 5rem;
+    min-height: auto;
+  }
+
+  .hero-split {
+    min-height: auto;
   }
   
   .hero-content,
