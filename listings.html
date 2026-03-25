@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Fairhaven Property Solutions</title>
-  <meta name="description" content="Learn about Fairhaven Property Solutions. Boutique property management company serving multifamily, HOA, and investment clients in Atlanta, Chattanooga, and beyond.">
-  
+  <title>Listings | Fairhaven Property Solutions</title>
+  <meta name="description" content="Browse available rental properties managed by Fairhaven Property Solutions. Serving Ringgold, GA, Atlanta, GA, Chattanooga, TN, and the Southeast.">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
-    <!-- Header Wrapper -->
+  <!-- Header Wrapper -->
   <div class="header-wrapper">
     <!-- Top Bar - Portal Buttons Right Aligned -->
     <div class="top-bar">
@@ -62,7 +62,7 @@
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
           <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="listings.html" class="nav-link">Listings</a></li>
+          <li><a href="listings.html" class="nav-link active">Listings</a></li>
           <li class="dropdown">
             <span class="nav-link dropdown-toggle">
               More
@@ -133,7 +133,7 @@
         <a href="hoa.html">HOA Community Management</a>
         <a href="brokerage.html">Investment Brokerage</a>
         <h4>Client Access</h4>
-        <a href="contact.html#listings">Available Rentals</a>
+        <a href="listings.html">Available Rentals</a>
       </li>
     </ul>
     <div class="mobile-portals">
@@ -143,177 +143,75 @@
     </div>
   </div>
 
-  <!-- About Hero -->
+  <!-- Listings Hero -->
   <section class="about-hero">
     <div class="about-hero-content">
-      <span class="section-label">Our Story</span>
-      <h1>Grounded in Experience.<br>Elevated in Service.</h1>
-      <p>Fairhaven Property Solutions was founded on a simple belief: property management should be professional, responsive, and genuinely focused on client success. We're building something different—boutique service with institutional capability.</p>
+      <span class="section-label">Available Properties</span>
+      <h1>Current<br>Listings</h1>
+      <p>Browse available properties managed by Fairhaven. Serving Ringgold, GA · Atlanta, GA · Chattanooga, TN · Southeast.</p>
     </div>
   </section>
 
-  <!-- Story Section -->
-  <section class="section section-light">
-    <div style="max-width: 1000px; margin: 0 auto; padding: 0 2rem;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-        <div>
-          <span class="section-label">Why Fairhaven</span>
-          <h2 style="margin-bottom: 1.5rem;">Built Different.<br>By Design.</h2>
-          <p style="margin-bottom: 1.5rem;">After years in the industry, we saw a gap. Property owners and investors deserved better than cookie-cutter management or faceless corporate service. They deserved a partner who understood their goals and had the systems to deliver.</p>
-          <p style="margin-bottom: 1.5rem;">Fairhaven was created to fill that gap. We combine deep local market knowledge with modern technology, responsive communication, and a genuine commitment to our clients' success.</p>
-          <p>Today, we manage approximately 180 doors and growing—each one treated with the attention it deserves. From multifamily investors to HOA boards, our clients choose us because we deliver results with integrity.</p>
-        </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Professional team meeting" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Listings Content -->
+  <section class="section section-light" style="padding:5rem 0;">
+    <div style="max-width:1100px;margin:0 auto;padding:0 2rem;">
 
-  <!-- Values Section -->
-  <section class="values-section">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-      <div style="text-align: center; margin-bottom: 4rem;">
-        <span class="section-label">Our Values</span>
-        <h2 class="section-title">What We Stand For</h2>
+      <!-- AppFolio Listings -->
+      <div style="text-align:center;margin-bottom:4rem;">
+        <span class="section-label">Available Now</span>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">View All Available Rentals</h2>
+        <p style="max-width:600px;margin:0 auto 2rem;color:var(--text-secondary);">Our full rental inventory is listed in our AppFolio portal. View current availability, photos, pricing, and apply online.</p>
+        <a href="https://fairhavenpropertysolutions.appfolio.com/listings" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:1rem;padding:1.25rem 2.5rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:0.5rem;">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          View All Available Rentals
+        </a>
+        <p style="margin-top:1.5rem;font-size:0.875rem;color:var(--text-muted);">Opens our property listings portal in a new tab</p>
       </div>
-      
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3>Integrity</h3>
-          <p>We do what we say we'll do. Transparent communication, honest advice, and ethical practices in every interaction.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-            </svg>
-          </div>
-          <h3>Excellence</h3>
-          <p>Good enough isn't good enough. We strive for excellence in every property we manage and every client we serve.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
-            </svg>
-          </div>
-          <h3>Partnership</h3>
-          <p>Your success is our success. We approach every relationship as a long-term partnership, not a transaction.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-            </svg>
-          </div>
-          <h3>Performance</h3>
-          <p>Results matter. We measure our success by the financial performance of the properties we manage and the satisfaction of our clients.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-              <line x1="8" y1="21" x2="16" y2="21"/>
-              <line x1="12" y1="17" x2="12" y2="21"/>
-            </svg>
-          </div>
-          <h3>Innovation</h3>
-          <p>We embrace technology and new ideas that improve efficiency, transparency, and the client experience.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3>Growth</h3>
-          <p>We're always learning, improving, and expanding our capabilities to better serve our clients' evolving needs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Leadership Section -->
-  <section class="section section-light">
-    <div style="max-width: 1000px; margin: 0 auto; padding: 0 2rem;">
-      <div style="text-align: center; margin-bottom: 4rem;">
-        <span class="section-label">Leadership</span>
-        <h2 class="section-title">Meet the Principal</h2>
-      </div>
-      
-      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start;">
-        <div style="text-align: center;">
-          <div style="width: 200px; height: 200px; border-radius: 50%; margin: 0 auto 1.5rem; overflow: hidden;">
-            <img src="coya.png" alt="Coya S." style="width: 100%; height: 100%; object-fit: cover; object-position: center 15%;" />
+      <!-- IDX / MLS Section -->
+      <div style="background:var(--bg-secondary);border-radius:12px;padding:3rem;margin-bottom:4rem;">
+        <div style="text-align:center;margin-bottom:2rem;">
+          <span class="section-label">Investment Properties</span>
+          <h2 class="section-title" style="margin-bottom:1rem;">MLS Listings</h2>
+          <p style="color:var(--text-secondary);max-width:650px;margin:0 auto 2rem;">We work with GAMLS and Flexmls to help investors find multifamily, single-family, commercial, and investment properties across the Southeast.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-bottom:2rem;">
+          <div style="background:var(--bg-primary);border-radius:8px;padding:1.5rem;text-align:center;">
+            <h3 style="font-size:1.125rem;margin-bottom:0.5rem;">GAMLS</h3>
+            <p style="font-size:0.9375rem;color:var(--text-secondary);margin-bottom:1rem;">Georgia MLS — Metro Atlanta & North Georgia including Ringgold/Chattanooga corridor</p>
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Coya S.</h3>
-          <p style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);">Principal Broker</p>
+          <div style="background:var(--bg-primary);border-radius:8px;padding:1.5rem;text-align:center;">
+            <h3 style="font-size:1.125rem;margin-bottom:0.5rem;">Flexmls</h3>
+            <p style="font-size:0.9375rem;color:var(--text-secondary);margin-bottom:1rem;">Broader regional reach across the Southeast</p>
+          </div>
         </div>
-        <div>
-          <p style="font-size: 1.0625rem; margin-bottom: 1.5rem;">Coya is the Founder and Principal Broker of Fairhaven Property Solutions, a boutique property management firm built on a clear standard: asset-focused management that delivers measurable results.</p>
-          <p style="margin-bottom: 1.5rem;">With a background spanning property management, real estate brokerage, and investment strategy, she brings a well-rounded, operator-level perspective to every asset under her care. Her approach is grounded in systems, data, and execution, with a focus on performance, efficiency, and long-term value.</p>
-          <p style="margin-bottom: 1.5rem;">Coya leads with a high level of accountability and clarity. She believes property management should go beyond basic oversight and function as a true partnership. That means proactive communication, strategic decision-making, and consistent follow-through that investors can rely on.</p>
-          <p>Based in Ringgold, Georgia, and serving clients across the Southeast and beyond, she is building Fairhaven Property Solutions into a trusted, results-driven firm known for doing things the right way, not the easy way.</p>
+        <p style="text-align:center;color:var(--text-muted);font-size:0.875rem;">Live IDX integration coming soon. Contact us directly for current investment property availability.</p>
+      </div>
+
+      <!-- Contact CTA -->
+      <div style="text-align:center;">
+        <h3 style="font-size:1.5rem;margin-bottom:1rem;">Looking for a Specific Property?</h3>
+        <p style="color:var(--text-secondary);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;">Tell us what you're looking for and we'll match you with available properties in our portfolio.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary">Contact Us</a>
+          <a href="https://calendly.com/fairhavenpropertysolutions/30min" class="btn btn-secondary" target="_blank" rel="noopener">Schedule a Consultation</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Stats Section -->
-  <section class="trust-stats">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number" data-counter="180" data-suffix="+">0</div>
-        <div class="stat-label">Doors Managed</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-counter="2">0</div>
-        <div class="stat-label">Markets Served</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-counter="98" data-suffix="%">0</div>
-        <div class="stat-label">Owner Satisfaction</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-counter="24" data-suffix="/7">0</div>
-        <div class="stat-label">Support Available</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vision Section -->
-  <section class="section section-dark">
-    <div style="max-width: 900px; margin: 0 auto; padding: 0 2rem; text-align: center;">
-      <span class="section-label">Our Vision</span>
-      <h2 style="margin-bottom: 1.5rem;">Building the Future of Property Management</h2>
-      <p style="font-size: 1.125rem; margin-bottom: 2rem;">We envision Fairhaven as a household name in real estate investment services—known for integrity, performance, and the kind of client relationships that last for decades.</p>
-      <p>As we grow, we're committed to maintaining the boutique service standards that define us. More doors doesn't mean less attention. It means more opportunity to prove that professional property management can be both scalable and personal.</p>
     </div>
   </section>
 
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="cta-content">
-      <h2 class="cta-title">Ready to Work With Us?</h2>
-      <p class="cta-description">Let's discuss how Fairhaven can help you achieve your property management and investment goals.</p>
+      <h2 class="cta-title">Ready to Apply?</h2>
+      <p class="cta-description">View our full rental inventory and apply online through our AppFolio portal. Questions? We're happy to help.</p>
       <div class="cta-buttons">
-        <a href="https://calendly.com/fairhavenpropertysolutions/30min" class="btn btn-light" target="_blank" rel="noopener">Schedule a Consultation</a>
-        <a href="contact.html" class="btn btn-secondary" style="color: var(--text-light); border-color: var(--text-light);">Contact Us</a>
+        <a href="https://fairhavenpropertysolutions.appfolio.com/listings" class="btn btn-light" target="_blank" rel="noopener">View All Listings</a>
+        <a href="contact.html" class="btn btn-secondary" style="color:var(--text-light);border-color:var(--text-light);">Contact Us</a>
       </div>
     </div>
   </section>
