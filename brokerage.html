@@ -16,6 +16,15 @@
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1856619');
+  </script>
+  <!-- End MailerLite Universal -->
 </head>
 <body>
     <!-- Header Wrapper -->
@@ -415,7 +424,8 @@
       <p class="footer-copyright">© 2026 Fairhaven Property Solutions. All rights reserved.</p>
       <div class="footer-legal">
         <a href="privacy.html">Privacy Policy</a>
-        <a href="#" style="display:none;">Terms of Service</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="sms-terms.html">SMS Terms</a>
       </div>
     </div>
   </footer>
@@ -437,10 +447,7 @@
       </button>
       <h3 style="margin-bottom:1rem;font-family:var(--font-heading);font-size:1.25rem;">Get In Touch</h3>
       <p style="margin-bottom:1.5rem;color:var(--text-secondary);font-size:0.9375rem;">Fill out the form below and we'll get back to you within one business day.</p>
-      <!-- MailerLite embed goes here — client to provide embed code -->
-      <div style="padding:2rem;background:var(--bg-secondary);border-radius:8px;text-align:center;color:var(--text-muted);font-size:0.875rem;">
-        [MailerLite form embed — client to provide embed code from app.mailerlite.com]
-      </div>
+      <div class="ml-embedded" data-form="CKXbva"></div>
     </div>
   </div>
 
@@ -463,5 +470,26 @@
   <script src="script.js"></script>
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
+
+<!-- Agency Dashboard Tracking -->
+<script>
+(function(){
+  var T='https://agency-dashboard-smoky.vercel.app';
+  var D='fairhavenpropertysolutions.com';
+  var sid=sessionStorage.getItem('_ad_sid');
+  if(!sid){sid=Math.random().toString(36).slice(2)+Date.now().toString(36);sessionStorage.setItem('_ad_sid',sid);}
+  var ua=navigator.userAgent;
+  var dv=/Mobi|Android/i.test(ua)?'mobile':/iPad|Tablet/i.test(ua)?'tablet':'desktop';
+  var br=/Edg\//.test(ua)?'edge':/OPR\//.test(ua)?'opera':/Chrome\//.test(ua)?'chrome':/Safari\//.test(ua)?'safari':/Firefox\//.test(ua)?'firefox':'other';
+  var rf=document.referrer&&document.referrer.indexOf(location.hostname)<0?document.referrer.split('/')[2]||'direct':'direct';
+  function send(e,p,m){fetch(T+'/api/trpc/tracking.trackEvent',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({json:{clientDomain:D,eventType:e,page:p||location.pathname,metadata:Object.assign({sessionId:sid,device:dv,browser:br},m||{})}})}).catch(function(){});}
+  var pvKey='_ad_pv_'+btoa(location.pathname).slice(0,12);
+  var lastPv=parseInt(sessionStorage.getItem(pvKey)||'0');
+  if(Date.now()-lastPv>60000){sessionStorage.setItem(pvKey,Date.now()+'');send('pageview',location.pathname,{referrer:rf,title:document.title.slice(0,80)});}
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="tel:"]');if(a)send('call_click',location.pathname,{phone:a.href.replace('tel:','')});var cta=e.target.closest('a[href*="contact"],button[type="submit"],[class*="cta"]');if(cta&&!a)send('cta_click',location.pathname,{text:(cta.innerText||'').slice(0,50)});},true);
+  document.addEventListener('submit',function(e){var f=e.target;if(f.tagName!=='FORM')return;var d=new FormData(f);var nm=String(d.get('name')||d.get('fullName')||'');var em=String(d.get('email')||'');if(nm&&em){fetch(T+'/api/trpc/tracking.trackFormSubmission',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({json:{clientDomain:D,name:nm,email:em,phone:String(d.get('phone')||''),serviceRequested:String(d.get('service')||''),message:String(d.get('message')||'')}})}).catch(function(){});send('conversion',location.pathname);}},true);
+})();
+</script>
+
 </body>
 </html>
